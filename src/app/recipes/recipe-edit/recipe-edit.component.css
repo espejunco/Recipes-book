@@ -1,0 +1,39 @@
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+label {
+    font-size: 16px;
+}
+
+img {
+    max-height: 200px;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #eee;
+}
+
+.edit {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.box {
+    margin-top: 20px;
+}
+
+.header {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .form-group label {
+        font-size: 12px;
+    }
+ }

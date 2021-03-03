@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <img src="favicon.ico" alt="icon">
+            <div class="navbar-brand">Libro de recetas</div>
+        </div>
+        <div class="navbar-default">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <a [routerLink]="['/recipes']">Recetas</a>
+                </li>
+                <li routerLinkActive="active" *ngIf="isAuthenticated">
+                    <a [routerLink]="['/recipes/new']">Añadir receta</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/shopping-list']">Lista de compra</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active" *ngIf="!isAuthenticated" class="mr-xlg">
+                    <a [routerLink]="['/authentication']">Entrar</a>
+                </li>
+                <li class="mr-xlg">
+                    <a (click)="onLogout()" *ngIf="isAuthenticated">Salir</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10">
+      <app-shopping-edit></app-shopping-edit>
+      <hr />
+      <h3>Ingredientes</h3>
+      <br>
+      <ul>
+        <li *ngFor="let ingredient of ingredients; let id = index">
+          <input type="checkbox" class="form-check-input">
+          <label class="form-check-label strikethrough" (click)="onEditItem(id)">
+            {{ ingredient.amount }} {{ ingredient.unit }} {{ ingredient.name }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

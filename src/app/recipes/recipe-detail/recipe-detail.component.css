@@ -1,0 +1,135 @@
+h1, h3 {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type:none;
+}
+
+a {
+    cursor: pointer;
+}
+
+label {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button > span {
+    margin-left: 10px;
+}
+
+.invisible-box {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.info-card-box {
+    margin-top: 8px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 33.33%);
+    background-color: blanchedalmond;
+}
+
+.far, .fas {
+    font-size: 32px;
+    align-self: center;
+    color: black;
+}
+
+.invisible-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.fa-shopping-bag {
+    font-size: 24px;
+}
+
+.vertical-line {
+    border-left: thick solid #ff0000;
+}
+
+.btn-group {
+    display: block;
+}
+
+.btn-outline-secondary {
+    margin-top: 5px;
+    color: #6c757d;
+    border-color: #6c757d;
+    background-image: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle {
+    box-shadow: none;
+    padding-right: 0;
+    background-color: white;
+    border-color: transparent ;
+}
+
+.recipe-text {
+    white-space: pre-line;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 991px) {
+    .invisible-card > .fas,
+    .invisible-card > .far {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .invisible-card {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .invisible-card > div {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .invisible-card h4 {
+        font-size: 14px;
+    }
+
+    .invisible-card h5 {
+        font-size: 12px;
+    }
+    
+    .far, .fas {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .fa-shopping-bag {
+        font-size: 16px;
+    }
+}

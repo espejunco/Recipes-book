@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin-bottom: 40px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+/* POSITIONING */
+.flex-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-centered-aligned {
+    display: flex;
+    align-items: center;
+}
+
+/* SPACING */
+
+.pa-0 {
+    padding:0;
+}
+
+.pl-3xlg {
+    padding-left: 24px;
+}
+
+.ml-lg {
+    margin-left: 4px;
+}
+
+.mr-lg {
+    margin-right: 4px;
+}
+
+.mr-xlg {
+    margin-right: 8px;
+}
+
+.mb-lg {
+    margin-bottom: 4px;
+}
+
+.mb-xlg {
+    margin-bottom: 8px;
+}
+
+.mt-xlg {
+    margin-top: 8px;
+}
+
+.group-box-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.group-box-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type=checkbox]:checked + label.strikethrough{
+    text-decoration: line-through;
+  }

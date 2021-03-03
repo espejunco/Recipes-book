@@ -1,0 +1,15 @@
+<div class="row flex-centered" *ngIf="!isAuthenticated">
+    <div class="col-md-10">
+        <div class="alert alert-warning text-center">
+            <strong>Atención!</strong> Haga click en
+            <a [routerLink]="['/authentication']"><b>Entrar</b></a> para ver y editar recetas!
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <h4 *ngIf="checkRecipes()">Recetas</h4>
+    <app-recipe-list [isAuthenticated]="isAuthenticated"></app-recipe-list>
+</div>
+<div class="col-md-7">
+    <router-outlet></router-outlet>
+</div>

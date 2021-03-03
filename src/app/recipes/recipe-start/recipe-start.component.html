@@ -1,0 +1,2 @@
+<h3 *ngIf="!isAuthenticated">Seleccione una receta</h3>
+<h3 *ngIf="isAuthenticated">Seleccione una receta o haga click <a [routerLink]="['/recipes/new']">aquí</a> para crear una nueva!</h3>

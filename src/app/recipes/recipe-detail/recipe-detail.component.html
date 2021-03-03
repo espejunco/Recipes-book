@@ -1,0 +1,74 @@
+<div class="row invisible-box">
+  <app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert>
+  <div class="col-xs-8">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+  <div class="col-xs-4 text-right" *ngIf="isAuthenticated">
+    <div appDropdown class="btn-group">
+      <button
+        type="button"
+        class="dropdown-toggle btn btn-outline-secondary pull-right">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <ul class="dropdown-menu pull-right">
+        <li><a [routerLink]="['edit']">Editar receta</a></li>
+        <li><a (click)="onDeleteRecipe()">Eliminar receta</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row mb-xlg">
+  <div class="col-xs-12">
+      <em>{{ recipe.description}}</em>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}">
+  </div>
+</div>
+<div class="info-card-box">
+  <div class="invisible-card">
+    <i class="far fa-clock"></i>
+    <div>
+      <h5>Tiempo de preparación</h5>
+      <h4><b>{{ recipe.preparationTime }}</b></h4>
+    </div>
+  </div>
+  <div class="invisible-card">
+    <i class="fas fa-utensils"></i>
+    <div>
+      <h5>Dificultad</h5>
+      <h4><b>{{ recipe.difficulty }}</b></h4>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-8">
+    <h3>Ingredientes</h3>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label strikethrough">
+          {{ ingredient.amount }} {{ ingredient.unit }} {{ ingredient.name }}
+        </label>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-4">
+    <button
+      type="button"
+      (click)="onAddToShoppingList()"
+      class="btn btn-outline-secondary pull-right"
+      >
+        <i class="fas fa-shopping-bag"></i>
+        <span>Añadir a la lista de la compra</span>
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Instrucciones</h3>
+    <h5 class="recipe-text">{{ recipe.instructions }}</h5>
+  </div>
+</div>
